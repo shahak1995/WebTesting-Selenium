@@ -7,7 +7,7 @@ class QatoolsForm
   FIRST_NAME_FIELD_NAME = 'firstname'
   LAST_NAME_FIELD_NAME = 'lastname'
   DATE_FIELD_ID = 'datepicker'
-  SEX_BUTTON_MALE_ID = 'sex-0'
+  SEX_BUTTON_MALE_ID = "sex-0"
 
   def initialize
     @chrome_driver = Selenium::WebDriver.for :chrome
@@ -45,7 +45,12 @@ class QatoolsForm
 
   def input_sex_male_button_value
     @chrome_driver.find_element(:id, 
-      SEX_BUTTON_MALE_ID)['radio']
+      SEX_BUTTON_MALE_ID)['value']
+  end
+
+  def input_sex_male_button
+    @chrome_driver.find_element(:id, 
+      SEX_BUTTON_MALE_ID).click
   end
 
   def current_url
