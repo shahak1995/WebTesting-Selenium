@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe RandomFormData do
 
+  context 'test all of the data types' do
+
     before(:all) do
       @data = Generator.new.form_data
     end
@@ -17,4 +19,5 @@ describe RandomFormData do
     it 'should get the date data and return a date' do
       expect(@data.date).to be_kind_of(Date)
     end
-  end 
+  end
+end

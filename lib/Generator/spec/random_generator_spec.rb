@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe RandomPostcodes do
 
-  context 'requesting information on the postcode API by getting random data' do
+  
 
     before(:all) do
       @postcodes_array = Generator.new.postcodes.random_array(rand(2..10))
-
     end
+
+    context 'requesting information on the postcode API by getting random data' do
 
     it 'should return an array' do
       expect(@postcodes_array).to be_kind_of(Array)
@@ -20,13 +21,13 @@ describe RandomPostcodes do
     it 'should be a string data type when retrieving data' do
       @postcodes_array.each do |result|
         expect(result).to be_kind_of(String)
-      end 
-    end 
+      end
+    end
 
     it 'should have a maximum of 8 characters in the postcode' do
       @postcodes_array.each do |character|
         expect(character.length).to be_between(5,9)
-      end 
+      end
     end
   end
 end

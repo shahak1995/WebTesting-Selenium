@@ -6,21 +6,25 @@ describe 'testing the demoqa automation form' do
     @driver = QatoolsForm.new
     @driver.visit_practice_form
     @url = 'https://www.toolsqa.com/automation-practice-form'
-    @name = "My name is #{Faker::GameOfThrones.character}, I work at #{Faker::Simpsons.location} and I got killed once and got brang back to life by this lovely witch who afterwards ran away"
-    p @name
+    @firstname = Generator.new.form_data.first_name
+    @lastname = Generator.new.form_data.last_name
+    @date = Generator.new.form_data.date
   end
 
   context 'testing the positive paths for the form' do
 
     it 'should land on the registration demo form page' do
       expect(@driver.current_url).to eq @url
-    end 
+    end
 
     it 'should accept a first name' do
-      @driver.input_firstname_field(@name)
-      expect(@driver.input_firstname_field_value).to eq @name
-    end 
-  end 
-end 
+      @driver.input_firstname_field(@firstname)
+      expect(@driver.input_firstname_field_value).to be_a(String)
+    end
 
-
+    it 'should accept a last name' do
+      @driver.input_lastname_field(@lastname)
+      expect(@driver.input_lastname_field_value).to eq @lastname
+    end
+  end
+end
