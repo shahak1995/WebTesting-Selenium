@@ -24,5 +24,5 @@ class QatoolsForm
 
   def current_url
     @chrome_driver.current_url
-  end 
+  end
 end 
