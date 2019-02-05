@@ -26,5 +26,10 @@ describe 'testing the demoqa automation form' do
       @driver.input_lastname_field(@lastname)
       expect(@driver.input_lastname_field_value).to eq @lastname
     end
+
+    it 'should return the date to be string' do
+      @driver.input_date_field(@date)
+      expect(@driver.input_date_field_value).to be_kind_of(String)
+    end
   end
 end
