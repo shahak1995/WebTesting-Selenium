@@ -22,18 +22,28 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_firstname_field_value).to eq @firstname
     end
 
+    it 'should return first name value as a String' do
+      @driver.input_firstname_field(@firstname)
+      expect(@driver.input_firstname_field_value).to be_a(String)
+    end
+
     it 'should accept a last name' do
       @driver.input_lastname_field(@lastname)
       expect(@driver.input_lastname_field_value).to eq @lastname
     end
 
-    it 'should return the date to be string' do
-      @driver.input_date_field(@date)
-      expect(@driver.input_date_field_value).to be_kind_of(String)
+    it 'should return last name value as a String' do
+      @driver.input_lastname_field(@lastname)
+      expect(@driver.input_lastname_field_value).to be_a(String)
     end
 
-    it 'should click on the male button' do
-      expect(@driver.input_sex_male_button_value).to be true
+    it 'should return the date to be string' do
+      @driver.input_date_field(@date)
+      expect(@driver.input_date_field_value).to be_a(String)
     end
+
+    # it 'should click on the male button' do
+    #   expect(@driver.input_sex_male_button_value).to be true
+    # end
   end
 end
