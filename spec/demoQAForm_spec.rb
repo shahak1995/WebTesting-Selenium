@@ -19,7 +19,7 @@ describe 'testing the demoqa automation form' do
 
     it 'should accept a first name' do
       @driver.input_firstname_field(@firstname)
-      expect(@driver.input_firstname_field_value).to be_a(String)
+      expect(@driver.input_firstname_field_value).to eq @firstname
     end
 
     it 'should accept a last name' do
