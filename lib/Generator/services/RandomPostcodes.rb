@@ -13,20 +13,15 @@ class RandomPostcodes
 
     number_of_postcodes.times do |i|
       array << generate_random_postcode
-    end 
+    end
 
     array
 
   end 
-
 
   def generate_random_postcode
     json_result = JSON.parse(self.class.get('/random/postcodes').body)
     json_result['result']['postcode']
   end
 
-end 
-
-test = RandomPostcodes.new
-p test.random_array(rand(2..10))
-
+end
