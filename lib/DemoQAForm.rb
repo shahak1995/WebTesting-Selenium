@@ -43,17 +43,20 @@ class QatoolsForm
       DATE_FIELD_ID)['value']
   end
 
-  def input_sex_male_button_value
-    @chrome_driver.find_element(:id, 
-      SEX_BUTTON_MALE_ID)['value']
-  end
-
   def input_sex_male_button
     @chrome_driver.find_element(:id, 
       SEX_BUTTON_MALE_ID).click
+  end
+
+  def input_sex_male_button_value
+    @chrome_driver.find_element(:id, 
+      SEX_BUTTON_MALE_ID)['value']
   end
 
   def current_url
     @chrome_driver.current_url
   end
 end
+
+test = QatoolsForm.new
+p test.input_sex_male_button_value
