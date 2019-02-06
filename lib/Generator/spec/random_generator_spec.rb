@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe RandomPostcodes do
-
   
-
     before(:all) do
       @postcodes_array = Generator.new.postcodes.random_array(rand(2..10))
     end

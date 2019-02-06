@@ -57,6 +57,3 @@ class QatoolsForm
     @chrome_driver.current_url
   end
 end
-
-test = QatoolsForm.new
-p test.input_sex_male_button_value
