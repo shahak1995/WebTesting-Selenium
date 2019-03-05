@@ -12,6 +12,6 @@ class RandomFormData
   end
 
   def date
-    Date.backward(5)
+    Date.backward(5).to_s
   end
 end

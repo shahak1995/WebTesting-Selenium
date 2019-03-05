@@ -1,6 +1,6 @@
 # WebTesting-Selenium
 ### Description
-This POM helps to automate tests on a webpage through the use of the seenium web driver and the chrome driver. Once the url for the webpage has been retrieved, you test the specific fields and enter the value within them to see if it inputs when test run. Once all the test is done, through the use of RSpec, the test are run to see if they have passed or not by automating the values into the specific fields. 
+This POM helps to automate tests on a webpage through the use of the selenium web driver and the chrome driver. Once the url for the webpage has been retrieved, you test the specific fields and enter the value within them to see if it inputs when test run. Once all the test is done, through the use of RSpec, the test are run to see if they have passed or not by automating the values into the specific fields. 
 
 ### Languages used
 * Ruby
@@ -11,9 +11,9 @@ This POM helps to automate tests on a webpage through the use of the seenium web
 * Selenium WebDriver
 
 ### How to download
-1. Open up your preffered web browser
-2. Enter this url or simply click on this link: https://github.com/shahak1995/WebTesting-Selenium
-3. Click on the green button on the right to clone or download the repo
+1. Git clone 'https://github.com/shahak1995/WebTesting-Selenium'
+2. Run 'bundle' in the terminal to install the gems
+3. Run 'rspec'
 
 ### How to use
 1. Open the folder through a code editor of your choice

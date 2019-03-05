@@ -42,8 +42,14 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_date_field_value).to be_a(String)
     end
 
-    it 'should click on the male button and return male as a string' do
-      expect(@driver.input_sex_male_button_value).to be_a(String)
+    it 'should click on the male button and be equal to male' do
+      @driver.input_sex_male_button
+      expect(@driver.input_sex_male_button_value).to eq 'Male'
+    end
+
+    it 'should click on the female button and be equal to female' do
+      @driver.input_sex_female_button
+      expect(@driver.input_sex_female_button_value).to eq 'Female'
     end
   end
 end
